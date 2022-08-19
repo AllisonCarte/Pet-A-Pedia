@@ -1,0 +1,36 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "image": "url goes here",
+            "name": "Mack",
+            "email": "cartemack@gmail.com",
+            "password": "petapppassword420",
+            "location": "Charleston",
+            "bio": "Owner of a micro-zoo!"
+        }
+    ],
+    "pets": [
+        {
+            "id": 1,
+            "image": "url goes here",
+            "userId": 1,
+            "upvotes": 666,
+            "name": "Jade",
+            "breed": "Mixed",
+            "species": "Dog",
+            "description": "Smol and fuzzy brown turd with some white patches on her belly",
+            "restrictions": "Can't have gravy",
+            "records": "Diagnosed with separation anxiety and ulcers",
+            "notes": "Loves her red alien toy and to lay on all the things I tell her not to"
+        }
+    ],
+    "schedule": [
+        {
+            "id": 1,
+            "petId": 1,
+            "date": "8/19/22",
+            "isTask": false
+        }
+    ]
+}
