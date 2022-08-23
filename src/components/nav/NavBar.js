@@ -14,6 +14,9 @@ export const NavBar = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/new">New Profile</Link>
             </li>
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/">Home</Link>
+            </li>
             {
                 localStorage.getItem("PAP_user")
                     ? <li className="navbar__item navbar__logout">
