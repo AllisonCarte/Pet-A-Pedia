@@ -9,5 +9,5 @@ export const PetList = () => {
         },
         []
     )
-    return <h2>Pets</h2>
+    return <h2>Pet Profiles</h2>
 }

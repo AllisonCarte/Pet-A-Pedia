@@ -1,5 +1,6 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { PetList } from "../pets/PetList"
+import { UserList } from "../users/UserList"
 
 export const ApplicationViews = () => {
     const localPAPUser = localStorage.getItem("PAP_user")
@@ -16,6 +17,7 @@ export const ApplicationViews = () => {
 
             }>
 <Route path="/pets" element={<PetList/>}/>
+<Route path="/profile" element={<UserList/>}/>
             </Route>
         </Routes>
     )
