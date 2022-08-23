@@ -10,9 +10,16 @@
       "bio": "Owner of a micro-zoo!"
     },
     {
+      "id": 2,
       "name": "Evan",
       "email": "hortensemirror@email.com",
-      "id": 2
+      "password": "lightningiscool"
+    },
+    {
+      "id": 3,
+      "name": "Sam",
+      "email": "zombiesfan@email.com",
+      "password": "littlemissmaxis"
     }
   ],
   "pets": [

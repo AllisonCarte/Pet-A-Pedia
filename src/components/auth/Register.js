@@ -20,7 +20,9 @@ export const Register = (prop) => {
             .then(created => {
                 if (created.hasOwnProperty("id")) {
                     localStorage.setItem("PAP_user", JSON.stringify({
-                        id: created.id
+                        id: created.id,
+                        password: created.password,
+                        email: created.email
                     }))
                     navigate("/")
                 }
@@ -58,7 +60,7 @@ export const Register = (prop) => {
                         type="text"
                         id="name"
                         className="form-control"
-                        placeholder="Enter your name here"
+                        placeholder="Name"
                         required autoFocus />
                 </fieldset>
                 <fieldset>
@@ -68,6 +70,15 @@ export const Register = (prop) => {
                         id="email"
                         className="form-control"
                         placeholder="Email Address"
+                        required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="password">Password</label>
+                    <input onChange={updateUser}
+                        type="password"
+                        id="password"
+                        className="form-control"
+                        placeholder="Password"
                         required />
                 </fieldset>
                 <fieldset>
