@@ -51,6 +51,14 @@
       "species": "Cat",
       "description": "Cream-colored kitten with blue eyes",
       "id": 3
+    },
+    {
+      "userId": 3,
+      "image": "https://images.pexels.com/photos/51340/rat-pets-eat-51340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Milly",
+      "species": "Rat",
+      "description": "Grey and white rat",
+      "id": 4
     }
   ],
   "schedule": [
