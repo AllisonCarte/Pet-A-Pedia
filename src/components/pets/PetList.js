@@ -5,7 +5,11 @@ export const PetList = () => {
 
     useEffect(
         () => {
-            console.log("Initial state of pets")
+            fetch(`http://localhost:8088/pets`)
+            .then(res => res.json())
+            .then(() => {
+
+            })
         },
         []
     )
@@ -26,6 +30,5 @@ export const PetList = () => {
             }
 
         </article>
-
     </>
 }
