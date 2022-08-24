@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Pet } from "./Pets";
 import "./Pets.css"
 
 export const PetList = () => {
@@ -37,17 +38,7 @@ export const PetList = () => {
             {
                 // iterating array with .map
                 filteredPets.map(
-                    pet => {
-                        return <section className="pet" key={`pet--${pet.id}`}>
-                            <ul>
-                                <div className="image__container"><img className="pet__image" src={pet.image}></img></div>
-                                <h3>{pet.name}</h3>
-                                <p>{pet.description}</p>
-                                <footer>{pet.notes}</footer>
-                                <br></br>
-                            </ul>
-                        </section>
-                    }
+                    pet => <Pet petObject = {pet}/>
                 )
 
             }
