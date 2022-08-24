@@ -25,7 +25,7 @@
   "pets": [
     {
       "id": 1,
-      "image": "url goes here",
+      "image": "https://67.media.tumblr.com/53bc7ef56b209c752599a2858abb7bb4/tumblr_oel6d3Ga9E1vhevmho1_400.jpg",
       "userId": 1,
       "upvotes": 666,
       "name": "Jade",
@@ -43,6 +43,14 @@
       "species": "Cat",
       "description": "Tabby cat with green eyes",
       "id": 2
+    },
+    {
+      "userId": 2,
+      "image": "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Taco",
+      "species": "Cat",
+      "description": "Cream-colored kitten with blue eyes",
+      "id": 3
     }
   ],
   "schedule": [
