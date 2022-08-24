@@ -3,6 +3,12 @@ import "./Pets.css"
 
 export const PetList = () => {
     const [pets, setPets] = useState([])
+    const [filteredPets, setFilteredPets] = useState([])
+
+    const localPAPUser = localStorage.getItem("PAP_user")
+    const PAPUserObject = JSON.parse(localPAPUser)
+
+
 
     useEffect(
         () => {
@@ -15,12 +21,22 @@ export const PetList = () => {
         },
         []
     )
+
+    useEffect(
+        () => {
+            // filtering pets based on the logged-in user
+           const myPets = pets.filter(pet => pet.userId === PAPUserObject.id)
+           setFilteredPets(myPets)
+        },
+        [pets]
+    )
+
     return <>
         <h2>Pet Profiles</h2>
         <article className="pets">
             {
                 // iterating array with .map
-                pets.map(
+                filteredPets.map(
                     pet => {
                         return <section className="pet" key={`pet--${pet.id}`}>
                             <ul>
