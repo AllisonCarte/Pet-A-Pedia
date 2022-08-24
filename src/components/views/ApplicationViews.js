@@ -1,4 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
+import { NewProfile } from "../pets/PetForm"
 import { PetList } from "../pets/PetList"
 import { UserList } from "../users/UserList"
 
@@ -11,13 +12,14 @@ export const ApplicationViews = () => {
             <Route path="/" element={
                 <>
                     <h1>Pet-A-Pedia</h1>
-                    
+
                     <Outlet />
                 </>
 
             }>
-<Route path="/pets" element={<PetList/>}/>
-<Route path="/profile" element={<UserList/>}/>
+                <Route path="/pets" element={<PetList />} />
+                <Route path="/new" element={<NewProfile />} />
+                <Route path="/profile" element={<UserList />} />
             </Route>
         </Routes>
     )

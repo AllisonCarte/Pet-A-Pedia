@@ -35,6 +35,14 @@
       "restrictions": "Can't have gravy",
       "records": "Has separation anxiety",
       "notes": "Loves her red alien toy and to lay on all the things I tell her not to"
+    },
+    {
+      "userId": 1,
+      "image": "https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg",
+      "name": "Mickey",
+      "species": "Cat",
+      "description": "Tabby cat with green eyes",
+      "id": 2
     }
   ],
   "schedule": [
