@@ -8,9 +8,10 @@ export const Pet = ({ petObject }) => {
         <Card style={styles.card}>
             <Card.Img variant="top" src={petObject.image} style={styles.cardImage} />
             <Card.Body>
-                <Card.Title>{petObject.name}</Card.Title>
+                <Card.Title as="h3">{petObject.name}</Card.Title>
                 <Card.Text>
                     <div>{petObject.description}</div>
+                    <br></br>
                     <div>{petObject.notes}</div>
                 </Card.Text>
                 {/* <Button variant="primary">Go somewhere</Button> */}
