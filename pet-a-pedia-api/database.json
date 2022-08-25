@@ -59,6 +59,14 @@
       "species": "Rat",
       "description": "Grey and white rat",
       "id": 4
+    },
+    {
+      "userId": 1,
+      "image": "https://images.pexels.com/photos/2078845/pexels-photo-2078845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Rengoku",
+      "species": "Gecko",
+      "description": "Black and brown lizard",
+      "id": 5
     }
   ],
   "schedule": [
