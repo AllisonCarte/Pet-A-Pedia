@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "image": "url goes here",
+      "image": "https://images.pexels.com/photos/2792116/pexels-photo-2792116.jpeg",
       "name": "Mack",
       "email": "mack@email.com",
       "password": "petapppassword020",
@@ -25,7 +25,7 @@
   "pets": [
     {
       "id": 1,
-      "image": "https://67.media.tumblr.com/53bc7ef56b209c752599a2858abb7bb4/tumblr_oel6d3Ga9E1vhevmho1_400.jpg",
+      "image": "https://images.pexels.com/photos/434046/pexels-photo-434046.jpeg",
       "userId": 1,
       "upvotes": 666,
       "name": "Jade",
@@ -42,6 +42,7 @@
       "name": "Mickey",
       "species": "Cat",
       "description": "Tabby cat with green eyes",
+      "notes": "Likes catnip and to roll around in the grass",
       "id": 2
     },
     {
@@ -66,6 +67,7 @@
       "name": "Rengoku",
       "species": "Gecko",
       "description": "Black and brown lizard",
+      "notes": "Enjoys sunning on the rocks in his enclosure",
       "id": 5
     }
   ],
