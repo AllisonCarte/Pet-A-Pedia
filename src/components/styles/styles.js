@@ -11,5 +11,12 @@ export const styles  = {
         borderRadius: 55,
         width: '50%',
         align: "center"
+        },
+        button: {
+          backgroundColor: "black",
+          borderColor: "transparent"
+        },
+        form: {
+          textAlign: "center"
         }
 }

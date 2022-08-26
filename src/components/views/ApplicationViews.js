@@ -1,7 +1,9 @@
 import { Outlet, Route, Routes } from "react-router-dom"
+import { Home } from "../home/home"
 import { NewProfile } from "../pets/PetForm"
 import { PetList } from "../pets/PetList"
 import { UserList } from "../users/UserList"
+import { petProfile } from "../pets/PetProfile"
 
 export const ApplicationViews = () => {
     const localPAPUser = localStorage.getItem("PAP_user")
@@ -11,12 +13,14 @@ export const ApplicationViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Pet-A-Pedia</h1>
+                    
 
                     <Outlet />
                 </>
 
             }>
+                <Route path="/petProfile" element={<petProfile/>}/>
+                <Route path="/home" element={<Home/>}/>
                 <Route path="/pets" element={<PetList />} />
                 <Route path="/new" element={<NewProfile />} />
                 <Route path="/profile" element={<UserList />} />

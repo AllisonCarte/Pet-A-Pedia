@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Form, Button } from "react-bootstrap";
+import { styles } from "../styles/styles";
 import "./Login.css"
 
 export const Register = (prop) => {
@@ -49,8 +51,58 @@ export const Register = (prop) => {
         copy[event.target.id] = event.target.value
         setUser(copy)
     }
-
     return (
+        <main style={styles.form}>
+        <Form style={styles.form} onSubmit={handleReg}>
+            <h1 style={styles.form}>Pet-A-Pedia</h1>
+             <h2 style={styles.form} className="form--header">Please register</h2>
+          <Form.Group className="mb-3" >
+            <Form.Label>Name</Form.Label>
+            <Form.Control style={styles.form} onChange={updateUser}
+                        type="text"
+                        id="name"
+                        className="form-control"
+                        placeholder="Name..."
+                        required autoFocus />
+            <Form.Text className="text-muted">
+              We'll only share your name if you want us to.
+            </Form.Text>
+          </Form.Group>
+
+
+          <Form.Group className="mb-3" >
+            <Form.Label>Email address</Form.Label>
+            <Form.Control style={styles.form}  onChange={updateUser}
+                        type="email"
+                        id="email"
+                        className="form-control"
+                        placeholder="Email Address..."
+                        required />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+
+
+          <Form.Group className="mb-3" >
+            <Form.Label>Password</Form.Label>
+            <Form.Control style={styles.form} onChange={updateUser}
+                        type="text"
+                        id="password"
+                        className="form-control"
+                        placeholder="Password..."
+                        required autoFocus />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+        <Link  to="/login">Already have an account?</Link>
+        </main>
+      );
+
+      // old return
+    /* return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleReg}>
                 <h1 className="form--header">Please register for Pet-a-Pedia</h1>
@@ -86,5 +138,5 @@ export const Register = (prop) => {
                 </fieldset>
             </form>
         </main>
-    )
+    )*/
 }
