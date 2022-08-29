@@ -10,6 +10,7 @@ export const Home = () => {
 
     return (<>
 
+
         <PetContainer />
         <HomeEdition/>
 
