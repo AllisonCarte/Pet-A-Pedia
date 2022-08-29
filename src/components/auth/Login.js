@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
+import { styles } from "../styles/styles";
+import { Form, Button } from "react-bootstrap";
 
 
 export const Login = () => {
     const [email, setEmail] = useState("")
-    const [password, setPassword] =useState("")
+    const [password, setPassword] = useState("")
     const navigate = useNavigate()
 
     const handleLogin = (e) => {
@@ -30,8 +32,50 @@ export const Login = () => {
             })
     }
 
+
+
+
+
+
     return (
-        <main className="container--login">
+        <main style={styles.form}>
+        <Form style={styles.form} onSubmit={handleLogin}>
+            <h1>Pet-A-Pedia</h1>
+            <h2>Please sign in</h2>
+            <Form.Group className="mb-3" >
+                <Form.Label htmlFor="inputemail">Email address</Form.Label>
+                <Form.Control type="email"
+                            value={email}
+                            onChange={evt => setEmail(evt.target.value)}
+                            className="form-control"
+                            placeholder="email"
+                            required autoFocus />
+                <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="mb-3" >
+                <Form.Label  htmlFor="inputPassword">Password</Form.Label>
+                <Form.Control type="password"
+                            value={password}
+                            onChange={evt => setPassword(evt.target.value)}
+                            className="form-control"
+                            placeholder="password"
+                            required autoFocus />
+            </Form.Group>
+
+            <Button variant="primary" type="submit">
+                Sign in
+            </Button>
+        </Form>
+        <section className="link--register">
+                <Link to="/register">Don't have an account?</Link>
+            </section>
+        </main>
+    );
+    /* return (
+        <main className="container--login" style={{ textAlign: "center" }}>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1>Pet-A-Pedia</h1>
@@ -65,5 +109,5 @@ export const Login = () => {
                 <Link to="/register">Don't have an account?</Link>
             </section>
         </main>
-    )
+    ) */
 }

@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import { Pet } from "./Pets";
 import "./Pets.css"
 
-/*All of PetList is literally just to get the pets on their owner's page at this point.
- There will likely be a separate module for getting things on the home page. */
-export const PetList = () => {
+/*'member how I said this would get its own module? here we are. I didn't plan well. Don't be like me. */
+export const homeEdition = () => {
     const [pets, setPets] = useState([])
-    const [filteredPets, setFilteredPets] = useState([])
 
     //Me, naming it PAP and going, "hehe, zombies reference" because pack-a-punch? nah, never. didn't happen.
     const localPAPUser = localStorage.getItem("PAP_user")
@@ -26,21 +24,12 @@ export const PetList = () => {
         []
     )
 
-    useEffect(
-        () => {
-            // filtering pets based on the logged-in user
-            const myPets = pets.filter(pet => pet.userId === PAPUserObject.id)
-            setFilteredPets(myPets)
-        },
-        [pets]
-    )
 
     return <>
-        <h2>Pet Profiles</h2>
         <article className="pets">
             {
                 // iterating array with .map
-                filteredPets.map(
+                pets.map(
                     pet => <Pet petObject={pet} />
                 )
 

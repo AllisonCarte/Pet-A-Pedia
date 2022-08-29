@@ -20,6 +20,12 @@
       "name": "Sam",
       "email": "zombiesfan@email.com",
       "password": "littlemissmaxis"
+    },
+    {
+      "name": "Becks",
+      "email": "BecksTest@email.com",
+      "password": "BecksTest",
+      "id": 4
     }
   ],
   "pets": [

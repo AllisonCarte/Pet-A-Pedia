@@ -13,6 +13,8 @@ export const Pet = ({ petObject }) => {
                     <div>{petObject.description}</div>
                     <br></br>
                     <div>{petObject.notes}</div>
+                   <br></br>
+                    <Button style={styles.button} onClick={""}> ❤️ {petObject.upvotes}</Button>
                 </Card.Text>
                 {/* <Button variant="primary">Go somewhere</Button> */}
             </Card.Body>
