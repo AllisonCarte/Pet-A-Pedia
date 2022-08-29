@@ -21,6 +21,21 @@ export const Pet = ({ petObject }) => {
         </Card>)
 }
 
+export const HomePets = ({ petObject }) => {
+
+    return (
+        <Card style={styles.card}>
+            <Card.Img variant="top" src={petObject.image} style={styles.cardImage} />
+            <Card.Body>
+                <Card.Title as="h3">{petObject.name}</Card.Title>
+                <Card.Text>
+                    <br></br>
+                    <Button style={styles.button} onClick={""}> ❤️ {petObject.upvotes}</Button>
+                </Card.Text>
+                {/* <Button variant="primary">Go somewhere</Button> */}
+            </Card.Body>
+        </Card>)
+}
 
 /* return <section className="pet" key={`pet--${petObject.id}`}>
         <ul>

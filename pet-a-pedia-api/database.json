@@ -46,6 +46,7 @@
       "userId": 1,
       "image": "https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg",
       "name": "Mickey",
+      "upvotes": 187,
       "species": "Cat",
       "description": "Tabby cat with green eyes",
       "notes": "Likes catnip and to roll around in the grass",
@@ -54,6 +55,7 @@
     {
       "userId": 2,
       "image": "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "upvotes": 87,
       "name": "Taco",
       "species": "Cat",
       "description": "Cream-colored kitten with blue eyes",
@@ -63,6 +65,7 @@
       "userId": 3,
       "image": "https://images.pexels.com/photos/51340/rat-pets-eat-51340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Milly",
+      "upvotes": 29,
       "species": "Rat",
       "description": "Grey and white rat",
       "id": 4
@@ -71,6 +74,7 @@
       "userId": 1,
       "image": "https://images.pexels.com/photos/2078845/pexels-photo-2078845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Rengoku",
+      "upvotes": 43,
       "species": "Gecko",
       "description": "Black and brown lizard",
       "notes": "Enjoys sunning on the rocks in his enclosure",

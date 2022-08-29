@@ -1,28 +1,19 @@
 import { useState } from "react";
 import { styles } from "../styles/styles"
-
-
-const PetListWithItems = () => {
-    const [pet, setPet] = useState([])
-
-}
+import { PetSearch } from "../pets/PetSearch";
+import { PetList } from "../pets/PetList.js"
+import { PetContainer } from "../pets/PetContainer";
+import { HomeEdition } from "./homePets";
 
 export const Home = () => {
 
-    return (
-        <>
 
-            <div className="main">
-                <div style={styles.form}className="search">
-                    <input type="text"
-                        placeholder="Search"
-        />
-                </div>
-            </div>
+    return (<>
 
+        <PetContainer />
+        <HomeEdition/>
 
-
-
-        </>
+    </>
     )
 }
+
