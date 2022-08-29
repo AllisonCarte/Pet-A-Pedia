@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Pet } from "./Pets";
-import "./Pets.css"
+
 
 /*All of PetList is literally just to get the pets on their owner's page at this point.
  There will likely be a separate module for getting things on the home page. */
