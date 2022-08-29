@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { HomePets } from "../pets/Pets";
-import "../pets/Pets.css"
+
 
 /*'member how I said this would get its own module? here we are. I didn't plan well. Don't be like me. */
 export const HomeEdition = () => {
