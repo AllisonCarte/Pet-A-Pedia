@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Pet } from "./Pets";
-import "./Pets.css"
+import { HomePets } from "../pets/Pets";
+import "../pets/Pets.css"
 
 /*'member how I said this would get its own module? here we are. I didn't plan well. Don't be like me. */
-export const homeEdition = () => {
+export const HomeEdition = () => {
     const [pets, setPets] = useState([])
 
     //Me, naming it PAP and going, "hehe, zombies reference" because pack-a-punch? nah, never. didn't happen.
@@ -24,13 +24,14 @@ export const homeEdition = () => {
         []
     )
 
+    const ascending = [...pets].sort((a, b) => b.upvotes - a.upvotes)
 
     return <>
         <article className="pets">
             {
                 // iterating array with .map
-                pets.map(
-                    pet => <Pet petObject={pet} />
+               ascending.slice(0, 3).map(
+                    pet => <HomePets petObject={pet} />
                 )
 
             }
