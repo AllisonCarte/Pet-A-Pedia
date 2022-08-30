@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { PetSearch } from "./PetSearch"
-import { PetSearching } from "./search"
+import { PetSearch } from "./PetSearchList"
+import { PetSearching } from "./PetSearch"
 
 
 

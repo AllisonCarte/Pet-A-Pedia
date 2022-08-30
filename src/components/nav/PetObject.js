@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export const PetsForSearch = ({ petObject }) => {
 
     return (
-        <Row xs={1} md={4} className="g-4">
+        <Row xs={1} md={6} className="g-4">
             {Array.from({ length: 1 }).map((_, idx) => (
                 <Col>
                     <Card >
@@ -17,8 +17,6 @@ export const PetsForSearch = ({ petObject }) => {
                             <Card.Title as="h3"><Link to="/pets">{petObject.name}</Link></Card.Title>
                             <Card.Text>
                                 <div>{petObject.description}</div>
-                                <br></br>
-                                <div>{petObject.notes}</div>
                                 <br></br>
                                 <Button variant="primary" style={styles.button}> ❤️ {petObject.upvotes}</Button>
                             </Card.Text>

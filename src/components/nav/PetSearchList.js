@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Pet } from "./Pets";
+
+import { PetsForSearch } from "./PetObject";
 
 
 /*All of PetList is literally just to get the pets on their owner's page at this point.
  There will likely be a separate module for getting things on the home page. */
-export const PetList = () => {
+export const PetSearch = ({searchTermState}) => {
     const [pets, setPets] = useState([])
     const [filteredPets, setFilteredPets] = useState([])
 
@@ -12,7 +13,13 @@ export const PetList = () => {
     const localPAPUser = localStorage.getItem("PAP_user")
     const PAPUserObject = JSON.parse(localPAPUser)
 
-
+useEffect(
+    () => {
+const searchedPets = pets.filter(pet => pet.name.startsWith(searchTermState))
+setFilteredPets(searchedPets)
+    },
+    [searchTermState]
+)
 
     useEffect(
         () => {
@@ -26,24 +33,12 @@ export const PetList = () => {
         []
     )
 
-    useEffect(
-        () => {
-            // filtering pets based on the logged-in user
-            const myPets = pets.filter(pet => pet.userId === PAPUserObject.id)
-            setFilteredPets(myPets)
-        },
-        [pets]
-    )
-
-    
-
     return <>
-        <h2>Pet Profiles</h2>
         <article className="pets">
             {
                 // iterating array with .map
                 filteredPets.map(
-                    pet => <Pet key={`pet--${pet.id}`} petObject={pet} />
+                    pet => <PetsForSearch key={`pet--${pet.id}`} petObject={pet} />
                 )
 
             }
