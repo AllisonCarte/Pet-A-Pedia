@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom"
 import { PetList } from "../pets/PetList"
 import { styles } from "../styles/styles"
+import Button from 'react-bootstrap/Button';
 
 export const User = ({ userObject }) => {
-
+const navigate = useNavigate()
 
     return <><section className="user" key={`user--${userObject.id}`} style={{ alignContent: "center" }}>
         <ul>
@@ -16,6 +18,9 @@ export const User = ({ userObject }) => {
             <br></br>
             <section>
                 <PetList />
+                <Button variant="primary" style={styles.button} onClick={() => {
+                            navigate(`/editUserDetails/${userObject.id}`)
+                        }}> Edit Profile</Button>
             </section>
         </ul>
 
