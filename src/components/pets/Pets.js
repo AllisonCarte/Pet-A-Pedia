@@ -3,6 +3,8 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { styles } from '../styles/styles';
+import { Link } from 'react-router-dom';
+import { ReadOnlyRow } from '../schedule/ScheduleList';
 
 export const Pet = ({ petObject }) => {
 
@@ -13,12 +15,13 @@ export const Pet = ({ petObject }) => {
                     <Card >
                         <Card.Img variant="top" src={petObject.image} />
                         <Card.Body>
-                            <Card.Title as="h3">{petObject.name}</Card.Title>
+                            <Card.Title as="h3"><Link to="/pets">{petObject.name}</Link></Card.Title>
                             <Card.Text>
                                 <div>{petObject.description}</div>
                                 <br></br>
                                 <div>{petObject.notes}</div>
                                 <br></br>
+                                <ReadOnlyRow/>
                                 <Button variant="primary" style={styles.button} onClick={""}> ❤️ {petObject.upvotes}</Button>
                             </Card.Text>
                         </Card.Body>
@@ -38,7 +41,7 @@ export const HomePets = ({ petObject }) => {
                     <Card >
                         <Card.Img variant="top" src={petObject.image}  />
                         <Card.Body>
-                            <Card.Title as="h3">{petObject.name}</Card.Title>
+                            <Card.Title as="h3"><Link to="/pets">{petObject.name}</Link></Card.Title>
                             <Card.Text>
                                 <br></br>
                                 <Button style={styles.button} onClick={""}> ❤️ {petObject.upvotes}</Button>

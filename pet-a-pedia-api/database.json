@@ -87,6 +87,14 @@
       "petId": 1,
       "date": "8/19/22",
       "isTask": false
+    },
+    {
+      "id": 2,
+      "petId": 1,
+      "date": "",
+      "isTask": true,
+      "task": "Clean the cage",
+      "frequency": "Twice weekly"
     }
   ]
 }
