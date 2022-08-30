@@ -3,7 +3,7 @@ import { Home } from "../home/home"
 import { NewProfile } from "../pets/PetForm"
 import { PetList } from "../pets/PetList"
 import { UserList } from "../users/UserList"
-import { PetProfile } from "../pets/PetProfile"
+import { PetDetails } from "../pets/PetDetails"
 import { SearchContainer } from "../nav/searchContainer"
 
 export const ApplicationViews = () => {
@@ -20,9 +20,8 @@ export const ApplicationViews = () => {
                 </>
 
             }>
-
                 <Route path="/search" element={<SearchContainer />} />
-                <Route path="/petProfile" element={<PetProfile />} />
+                <Route path="/pets/:petId" element={<PetDetails />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/pets" element={<PetList />} />
                 <Route path="/new" element={<NewProfile />} />
