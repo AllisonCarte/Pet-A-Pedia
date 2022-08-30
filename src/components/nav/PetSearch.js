@@ -8,7 +8,7 @@ export const PetSearching = ({ setterFunction }) => {
                         setterFunction(changeEvent.target.value)
                     }
                 }
-                type="text" placeholder="Enter search terms" />
+                type="text" placeholder="Enter pet name" />
         </div>
 
     )

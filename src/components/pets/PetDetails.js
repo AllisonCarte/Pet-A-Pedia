@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Pet } from "./Pets";
+import { SinglePet } from "./Pets";
 
 
 export const PetDetails = () => {
@@ -20,12 +20,11 @@ export const PetDetails = () => {
 
     
     return <>
-    <h2>Pet Profiles</h2>
     <article className="pets">
         {
             // iterating array with .map
           
-                <Pet petObject={profilePet} />
+                <SinglePet petObject={profilePet} />
           
 
         }

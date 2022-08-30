@@ -48,9 +48,13 @@
       "name": "Mickey",
       "upvotes": 187,
       "species": "Cat",
+      "breed": "Tabby",
+      "restrictions": "Allergic to catnip",
+      "Records": "Feline eosinophilic keratitis",
       "description": "Tabby cat with green eyes",
       "notes": "Likes catnip and to roll around in the grass",
-      "id": 2
+      "id": 2,
+      "records": "Eye issues"
     },
     {
       "userId": 2,
@@ -59,7 +63,9 @@
       "name": "Taco",
       "species": "Cat",
       "description": "Cream-colored kitten with blue eyes",
-      "id": 3
+      "id": 3,
+      "breed": "Tabby",
+      "notes": "Mischievous "
     },
     {
       "userId": 3,
@@ -68,7 +74,10 @@
       "upvotes": 29,
       "species": "Rat",
       "description": "Grey and white rat",
-      "id": 4
+      "id": 4,
+      "breed": "Dumbo",
+      "restrictions": "Can't have grapes",
+      "notes": "Escape artist"
     },
     {
       "userId": 1,
@@ -79,6 +88,14 @@
       "description": "Black and brown lizard",
       "notes": "Enjoys sunning on the rocks in his enclosure",
       "id": 5
+    },
+    {
+      "userId": 3,
+      "image": "https://images.pexels.com/photos/104373/pexels-photo-104373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Mr. Tumnus",
+      "species": "Rabbit",
+      "description": "Beige with darker ears",
+      "id": 6
     }
   ],
   "schedule": [
