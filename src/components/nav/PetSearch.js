@@ -1,16 +1,25 @@
 import { useEffect, useState } from "react";
-import { HomePets } from "../pets/Pets";
+
+import { PetsForSearch } from "./PetS";
 
 
-/*'member how I said this would get its own module? here we are. I didn't plan well. Don't be like me. */
-export const HomeEdition = () => {
+/*All of PetList is literally just to get the pets on their owner's page at this point.
+ There will likely be a separate module for getting things on the home page. */
+export const PetSearch = ({searchTermState}) => {
     const [pets, setPets] = useState([])
+    const [filteredPets, setFilteredPets] = useState([])
 
     //Me, naming it PAP and going, "hehe, zombies reference" because pack-a-punch? nah, never. didn't happen.
     const localPAPUser = localStorage.getItem("PAP_user")
     const PAPUserObject = JSON.parse(localPAPUser)
 
-
+useEffect(
+    () => {
+const searchedPets = pets.filter(pet => pet.name.startsWith(searchTermState))
+setFilteredPets(searchedPets)
+    },
+    [searchTermState]
+)
 
     useEffect(
         () => {
@@ -24,14 +33,12 @@ export const HomeEdition = () => {
         []
     )
 
-    const ascending = [...pets].sort((a, b) => b.upvotes - a.upvotes)
-
     return <>
-        <article  className="pets" >
+        <article className="pets">
             {
                 // iterating array with .map
-               ascending.slice(0, 3).map(
-                    pet => <HomePets key={`pet--${pet.id}`} petObject={pet} />
+                filteredPets.map(
+                    pet => <PetsForSearch key={`pet--${pet.id}`} petObject={pet} />
                 )
 
             }
