@@ -5,6 +5,7 @@ import { PetList } from "../pets/PetList"
 import { UserList } from "../users/UserList"
 import { PetDetails } from "../pets/PetDetails"
 import { SearchContainer } from "../nav/searchContainer"
+import { PetEdit } from "../pets/PetEdit"
 
 export const ApplicationViews = () => {
     const localPAPUser = localStorage.getItem("PAP_user")
@@ -19,7 +20,7 @@ export const ApplicationViews = () => {
                     <Outlet />
                 </>
 
-            }>
+            }>  <Route path="/editDetails/:petId" element={< PetEdit />} />
                 <Route path="/search" element={<SearchContainer />} />
                 <Route path="/pets/:petId" element={<PetDetails />} />
                 <Route path="/home" element={<Home />} />

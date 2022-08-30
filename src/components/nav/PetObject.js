@@ -14,7 +14,7 @@ export const PetsForSearch = ({ petObject }) => {
                     <Card >
                         <Card.Img variant="top" src={petObject.image} />
                         <Card.Body>
-                            <Card.Title as="h3"><Link to="/pets">{petObject.name}</Link></Card.Title>
+                            <Card.Title as="h3"><Link to={`/pets/${petObject.id}`}>{petObject.name}</Link></Card.Title>
                             <Card.Text>
                                 <div>{petObject.description}</div>
                                 <br></br>
