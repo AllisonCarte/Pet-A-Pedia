@@ -41,7 +41,7 @@ export const PetList = () => {
             {
                 // iterating array with .map
                 filteredPets.map(
-                    pet => <Pet petObject={pet} />
+                    pet => <Pet key={`pet--${pet.id}`} petObject={pet} />
                 )
 
             }

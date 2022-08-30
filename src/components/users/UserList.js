@@ -35,7 +35,7 @@ export const UserList = () => {
         {
             // iterating array with .map
             filteredUser.map(
-                user => <User userObject = {user}/>
+                user => <User key={`user--${user.id}`} userObject = {user}/>
             )
         }
     </article>

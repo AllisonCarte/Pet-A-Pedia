@@ -6,9 +6,9 @@ export const User = ({ userObject }) => {
         <ul>
              <h3>{userObject.name}</h3>
             <div style={styles.usersImageContainer} className="image__container"><img style={styles.usersImageWidth} className="user__image" src={userObject.image}></img></div>
-            <div><p>{userObject.bio}</p></div>
-           <div><p>{userObject.email}</p></div>
-            <div><p>{userObject.location}</p></div>
+            <div>{userObject.bio}</div>
+           <div>{userObject.email}</div>
+            <div>{userObject.location}</div>
             <PetList/>
             <br></br>
         </ul>
