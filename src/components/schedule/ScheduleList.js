@@ -1,32 +1,58 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Schedule } from "./Schedule";
+import {useParams } from "react-router-dom"
+import Table from "react-bootstrap/esm/Table";
 
-export const ReadOnlyRow = ({ }) => {
+export const ScheduleList = () => {
     const [schedule, setSchedule] = useState([])
-    const [filteredSchedule, setFilteredSchedule] = useState([])
-
-    const localPAPUser = localStorage.getItem("PAP_user")
-    const PAPUserObject = JSON.parse(localPAPUser)
+ 
+    const {petId} = useParams()
 
     useEffect(
         () => {
-            // fetching what we need from the database. in this case, pets.
-            fetch(`http://localhost:8088/schedule`)
+            if(petId){
+
+                // fetching what we need from the database. in this case, pets.
+                
+                fetch(`http://localhost:8088/pets/${petId}?_embed=schedule`)
+                .then(res => res.json())
+                .then((petScheduleArray) => {
+                    setSchedule(petScheduleArray.schedule)
+                })
+            }
+            else{
+                
+                fetch(`http://localhost:8088/schedule`)
                 .then(res => res.json())
                 .then((petScheduleArray) => {
                     setSchedule(petScheduleArray)
                 })
+            }
         },
         []
     )
 
     return (
         <section>
+             <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>Appt</th>
+          <th>Date</th>
+          <th>Task</th>
+          <th>Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
+    
             {
                 schedule.map(
                     schedule => <Schedule scheduleObject={schedule} />
                 )
-            }</section>
+            }
+            </tbody>
+            </Table>
+            </section>
     );
 };

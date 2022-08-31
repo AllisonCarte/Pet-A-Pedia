@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-
+import { styles } from "../styles/styles"
 export const PetEdit = () => {
     // Provide initial state for profile
 
@@ -190,7 +190,7 @@ export const PetEdit = () => {
                 className="btn btn-primary">
                 Save
             </button>
-            <button className="btn btn-primary" onClick={() => {
+            <button className="btn btn-primary" style={styles.button} onClick={() => {
                 navigate(`/pets/${pet.id}`)
             }}> Cancel</button>
         </form>
