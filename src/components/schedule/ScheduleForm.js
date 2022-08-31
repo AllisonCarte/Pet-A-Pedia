@@ -11,7 +11,6 @@ export const NewScheduleItem = () => {
     "appointment": "",
     "task": "",
     "frequency": "",
-    "petId": 0
   })
 
 
@@ -19,13 +18,13 @@ export const NewScheduleItem = () => {
     e.preventDefault()
 
     const sendToAPI = {
-      petId: schedule.petId,
+      petId: +petId,
       date: schedule.date,
       isTask: schedule.isTask,
       details: schedule.details,
       frequency: schedule.frequency
     }
-    return fetch(`http://localhost:8088/schedule?petId=${petId}&_expand=pet`, {
+    return fetch(`http://localhost:8088/schedule`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

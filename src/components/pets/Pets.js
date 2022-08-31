@@ -11,7 +11,7 @@ import { Delete } from './PetDelete';
 export const Pet = ({ petObject }) => {
 
     return (<>
-        <Row xs={1}  className="g-1">
+        <Row xs={1} style={{ height: '14rem', width: '18rem'  }} className="g-1">
             {Array.from({ length: 1 }).map((_, idx) => (
                 <Col>
                     <Card >
@@ -85,7 +85,7 @@ export const SinglePet = ({ petObject }) => {
                                 <Delete />
                                 <Button variant="primary" style={styles.button}> ❤️ {petObject.upvotes}</Button>
                                 <Button variant="primary" style={styles.button} onClick={() => {
-                                    navigate(`/scheduleEdit/:petId `)
+                                    navigate(`/scheduleEdit/${petObject.id} `)
                                 }}>Add to Schedule</Button>
                             </Card.Text>
                         </Card.Body>
