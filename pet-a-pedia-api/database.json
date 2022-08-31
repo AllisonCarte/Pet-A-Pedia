@@ -3,7 +3,7 @@
     {
       "id": 1,
       "image": "https://images.pexels.com/photos/2792116/pexels-photo-2792116.jpeg",
-      "name": "Mack",
+      "name": "Alli",
       "email": "mack@email.com",
       "password": "petapppassword020",
       "location": "Charleston",
@@ -37,7 +37,7 @@
       "image": "https://images.pexels.com/photos/434046/pexels-photo-434046.jpeg",
       "userId": 1,
       "upvotes": 666,
-      "name": "Jade",
+      "name": "Jackie",
       "breed": "Mixed",
       "species": "Dog",
       "description": "Smol, fuzzy brown thing with some white patches on her belly",
@@ -111,20 +111,28 @@
       "frequency": "Twice weekly"
     },
     {
-      "petId": 0,
-      "date": "2022-08-17",
+      "petId": 1,
+      "date": "2022-08-16",
       "isTask": false,
-      "details": "test",
-      "frequency": "test",
+      "details": "Test",
+      "frequency": "twice",
       "id": 3
     },
     {
-      "petId": 0,
-      "date": "2022-08-18",
+      "petId": 1,
+      "date": "",
       "isTask": false,
-      "details": "test",
-      "frequency": "once",
+      "details": "tEST",
+      "frequency": "Once",
       "id": 4
+    },
+    {
+      "petId": 1,
+      "date": "2022-08-09",
+      "isTask": false,
+      "details": "PLay date",
+      "frequency": "Once",
+      "id": 5
     }
   ]
 }
