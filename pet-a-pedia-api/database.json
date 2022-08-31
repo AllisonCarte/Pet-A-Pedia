@@ -7,7 +7,7 @@
       "email": "mack@email.com",
       "password": "petapppassword020",
       "location": "Charleston",
-      "bio": "Owner of a micro-zoo!"
+      "bio": "This is a bio"
     },
     {
       "id": 2,
@@ -91,14 +91,6 @@
       "description": "Black and brown lizard",
       "notes": "Enjoys sunning on the rocks in his enclosure",
       "id": 5
-    },
-    {
-      "userId": 3,
-      "image": "https://images.pexels.com/photos/104373/pexels-photo-104373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "name": "Mr. Tumnus",
-      "species": "Rabbit",
-      "description": "Beige with darker ears",
-      "id": 6
     }
   ],
   "schedule": [
@@ -106,15 +98,33 @@
       "id": 1,
       "petId": 1,
       "date": "8/19/22",
-      "isTask": false
+      "isTask": false,
+      "details": "Vet",
+      "frequency": "Once"
     },
     {
       "id": 2,
       "petId": 1,
       "date": "",
       "isTask": true,
-      "task": "Clean the cage",
+      "details": "Clean the cage",
       "frequency": "Twice weekly"
+    },
+    {
+      "petId": 0,
+      "date": "2022-08-17",
+      "isTask": false,
+      "details": "test",
+      "frequency": "test",
+      "id": 3
+    },
+    {
+      "petId": 0,
+      "date": "2022-08-18",
+      "isTask": false,
+      "details": "test",
+      "frequency": "once",
+      "id": 4
     }
   ]
 }

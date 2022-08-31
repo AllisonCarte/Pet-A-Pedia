@@ -4,27 +4,31 @@ import { styles } from "../styles/styles"
 import Button from 'react-bootstrap/Button';
 
 export const User = ({ userObject }) => {
-const navigate = useNavigate()
+    const navigate = useNavigate()
 
-    return <><section className="user" key={`user--${userObject.id}`} style={{ alignContent: "center" }}>
-        <ul>
-            <h3>{userObject.name}</h3>
-            <div style={styles.usersImageContainer} className="image__container"><img style={styles.usersImageWidth} className="user__image" src={userObject.image}></img></div>
-
-            <div>{userObject.email}</div>
-            <div>{userObject.location}</div>
-            <br></br>
-            <section> <input type="text" placeholder={userObject.bio}/> <div></div></section>
-            <br></br>
-            <section>
-                <PetList />
+    return <>
+        <article className="user" key={`user--${userObject.id}`} style={{ alignContent: "center" }}>
+            <ul>
+                
+                <section>
+                <h3>{userObject.name}</h3>
+                <div style={styles.usersImageContainer} className="image__container"><img style={styles.usersImageWidth} className="user__image" src={userObject.image}></img></div>
+                <div>{userObject.email}</div>
+                <div>{userObject.location}</div>
+                <br></br>
+                </section>
+                <section>
+                <div>{userObject.bio}</div>
+                <br></br>
                 <Button variant="primary" style={styles.button} onClick={() => {
-                            navigate(`/editUserDetails/${userObject.id}`)
-                        }}> Edit Profile</Button>
-            </section>
-        </ul>
+                    navigate(`/editUserDetails/${userObject.id}`)
+                }}> Edit Profile</Button></section>
+                <section>
+                    <PetList />
+                </section>
+            </ul>
 
-    </section>
+        </article>
 
     </>
 }

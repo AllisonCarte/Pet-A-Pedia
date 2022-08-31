@@ -39,7 +39,8 @@ export const PetList = () => {
 
     return <>
         <h2>Pet Profiles</h2>
-        <article className="pets">
+        <article className="pets"> 
+        <div style={{display: 'flex', flexDirection: 'row'}}> 
             {
                 // iterating array with .map
                 filteredPets.map(
@@ -47,7 +48,7 @@ export const PetList = () => {
                 )
 
             }
-
+            </div>
         </article>
     </>
 }

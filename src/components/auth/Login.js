@@ -24,7 +24,7 @@ export const Login = () => {
                         password: user.password
                     }))
 
-                    navigate("/")
+                    navigate("/home")
                 }
                 else {
                     window.alert("Invalid login")

@@ -7,6 +7,7 @@ import { PetDetails } from "../pets/PetDetails"
 import { SearchContainer } from "../nav/searchContainer"
 import { PetEdit } from "../pets/PetEdit"
 import { UserEdit } from "../users/UserEdit"
+import { NewScheduleItem } from "../schedule/ScheduleForm"
 
 export const ApplicationViews = () => {
     const localPAPUser = localStorage.getItem("PAP_user")
@@ -22,7 +23,7 @@ export const ApplicationViews = () => {
                 </>
 
             }>
-
+                <Route path="/scheduleEdit/:petId" element={< NewScheduleItem />} />
                 <Route path="/editUserDetails/:userId" element={< UserEdit />} />
                 <Route path="/editDetails/:petId" element={< PetEdit />} />
                 <Route path="/search" element={<SearchContainer />} />

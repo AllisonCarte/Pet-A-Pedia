@@ -1,11 +1,25 @@
-export const Schedule = ({scheduleObject}) => {
+import Table from "react-bootstrap/esm/Table";
+
+export const Schedule = ({ scheduleObject }) => {
 
 
-    return (
+
+  return (
         <tr>
-          <td>{scheduleObject.task} </td>
-    
+          {
+            scheduleObject.isTask ?
+              <td></td>
+            :
+            <td>{scheduleObject.details}</td>
+          }
+          <td>{scheduleObject.date}</td>
+          {
+            !scheduleObject.isTask ?
+              <td></td>
+            :
+            <td>{scheduleObject.details}</td>
+          }
           <td>{scheduleObject.frequency}</td>
         </tr>
-      );
+  );
 }

@@ -26,7 +26,7 @@ export const Register = (prop) => {
                         password: created.password,
                         email: created.email
                     }))
-                    navigate("/")
+                    navigate("/home")
                 }
             })
     }
