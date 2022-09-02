@@ -28,7 +28,7 @@ export const User = ({ userObject }) => {
                 <ListGroup.Item>{userObject.bio}</ListGroup.Item>
             </ListGroup>
             <Card.Body style={{textAlign: "center"}} >
-                <Button variant="primary" onClick={() => {
+                <Button style={styles.button} variant="primary" onClick={() => {
                     navigate(`/editUserDetails/${userObject.id}`)
                 }}> Edit Profile</Button>
                

@@ -6,7 +6,7 @@
       "name": "Mack",
       "email": "mack@email.com",
       "password": "petapppassword020",
-      "location": "Charleston",
+      "location": "Location goes here",
       "bio": "This is a bio"
     },
     {
@@ -25,10 +25,14 @@
       "bio": "Pack a punch!!"
     },
     {
-      "name": "Becks",
-      "email": "BecksTest@email.com",
+      "name": "Beck",
+      "email": "Becks@email.com",
       "password": "BecksTest",
-      "id": 4
+      "id": 4,
+      "user": "BecksTes",
+      "image": "https://images.pexels.com/photos/45863/frog-butterfly-pond-mirroring-45863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Charleston",
+      "bio": "Mama frawg"
     },
     {
       "name": "Marcello",
@@ -45,11 +49,11 @@
       "id": 1,
       "image": "https://images.pexels.com/photos/1933464/pexels-photo-1933464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "userId": 1,
-      "upvotes": 666,
+      "upvotes": 130,
       "name": "Ophie",
       "breed": "Mixed-breed",
       "species": "Dog",
-      "description": "A small, white pup",
+      "description": "A small, white pupper",
       "restrictions": "",
       "records": "",
       "notes": "Loves to lay on all the things I tell her not to"
@@ -58,23 +62,23 @@
       "userId": 1,
       "image": "https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg",
       "name": "Mickey",
-      "upvotes": 187,
+      "upvotes": 87,
       "species": "Cat",
       "breed": "Tabby",
       "restrictions": "Allergic to catnip",
       "Records": "Feline eosinophilic keratitis",
-      "description": "A pretty green-eyed kitty",
+      "description": "A grey, brown and white cat with green eyes",
       "notes": "Inquisitive, but hates to admit it.",
       "id": 2,
       "records": "Eye issues"
     },
     {
-      "userId": 2,
-      "image": "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "upvotes": 87,
+      "userId": 4,
+      "image": "https://images.pexels.com/photos/1870376/pexels-photo-1870376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "upvotes": 187,
       "name": "Taco",
       "species": "Cat",
-      "description": "Cream-colored kitten with blue eyes",
+      "description": "Orange and white kitten",
       "id": 3,
       "breed": "Tabby",
       "notes": "In ancient times, cats were worshipped as gods. Taco has not forgotten this."
@@ -85,11 +89,11 @@
       "name": "Milly",
       "upvotes": 29,
       "species": "Rat",
-      "description": "Grey and white rat",
+      "description": "Grey and white rat. Eternally boggling.",
       "id": 4,
       "breed": "Dumbo",
       "restrictions": "Can't have grapes",
-      "notes": "Escape artist"
+      "notes": "Natural-born escape artist"
     },
     {
       "userId": 1,
@@ -106,33 +110,45 @@
       "userId": 5,
       "image": "https://images.pexels.com/photos/2540644/pexels-photo-2540644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Dave",
+      "upvotes": 231,
       "species": "Macaw",
-      "description": "",
-      "id": 6
+      "description": "A large, South-American parrot",
+      "id": 6,
+      "notes": "Voted for Birdie Sanders",
+      "breed": "Blue-and-Gold "
     },
     {
       "userId": 5,
       "image": "https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "name": "Woof",
-      "species": "Dog",
-      "description": "",
-      "id": 7
+      "name": "Ein",
+      "upvotes": 152,
+      "species": "Corgi",
+      "description": "A fluffy, red and white pup",
+      "id": 7,
+      "breed": "Pembroke Welsh",
+      "notes": "Worked as a data dog"
     },
     {
       "userId": 5,
-      "image": "https://images.pexels.com/photos/127028/pexels-photo-127028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "name": "Sgt. Pepper",
+      "image": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56535532/2/?bust=1661471209&width=1080",
+      "name": "Debo",
+      "upvotes": 666,
       "species": "Cat",
-      "description": "",
-      "id": 8
+      "description": "A calico with yellow eyes",
+      "id": 8,
+      "notes": "The God of Destruction",
+      "breed": "Cornish Rex"
     },
     {
-      "userId": 5,
+      "userId": 4,
       "image": "https://images.pexels.com/photos/1335341/pexels-photo-1335341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "upvotes": 122,
       "name": "Shadow",
       "species": "Cat",
-      "description": "Meow",
-      "id": 9
+      "description": "Reverse calico",
+      "id": 9,
+      "breed": "Tortoiseshell",
+      "notes": "Beauty incarnate"
     }
   ],
   "schedule": [

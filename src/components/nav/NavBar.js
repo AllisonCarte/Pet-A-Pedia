@@ -24,7 +24,11 @@ export const NavBar = () => {
                         <Nav.Link href="/home">Home</Nav.Link>
                         <Nav.Link href="/profile">Profile</Nav.Link>
                         <NavDropdown title="Pets" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="/pets">My pets</NavDropdown.Item>
+                            <NavDropdown.Item href="/pets">
+                               Explore
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/mypets">My pets</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/new">
                                 New Profile

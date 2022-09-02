@@ -40,8 +40,8 @@ export const NewScheduleItem = () => {
       })
   }
   return (
-    <article style={styles.form}>
-    <Form style={styles.form}>
+    <article >
+    <Form >
       <h2 style={styles.form}>Add to Schedule</h2>
       <Table>
 
@@ -88,7 +88,7 @@ export const NewScheduleItem = () => {
       </td>
     </tr>
           </Table>
-    <Form.Group>
+    <Form.Group style={styles.form}>
                 <div className="Form-group">
                     <label htmlFor="isTask">Is this a task?  </label>
                     <input type="checkbox"
@@ -102,9 +102,13 @@ export const NewScheduleItem = () => {
                             } />
                 </div>
             </Form.Group>
+            <section
+             style={styles.form}
+            >
       <Button
+     
         onClick={(clickEvent) => handleSave(clickEvent)}
-        >Submit Schedule</Button>
+        >Submit Schedule</Button></section>
     </Form>
         </article>
   )

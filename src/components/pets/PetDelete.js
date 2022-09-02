@@ -38,7 +38,7 @@ const getPets = () => {
                    getPets()
                 })
                 .then((
-                    navigate('/pets')
+                    navigate('/mypets')
                 ))
 
         }} className="pet__delete">Delete Profile</Button>

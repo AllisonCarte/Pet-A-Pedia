@@ -81,7 +81,6 @@ export const SinglePet = ({ petObject }) => {
                                     navigate(`/editDetails/${petObject.id}`)
                                 }}> Edit Pet</Button>
                                 <Delete />
-                                <Button variant="primary" style={styles.button}> ❤️ {petObject.upvotes}</Button>
                                 <Button variant="primary" style={styles.button} onClick={() => {
                                     navigate(`/scheduleEdit/${petObject.id} `)
                                 }}>Add to Schedule</Button>
