@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 export const NewProfile = () => {
     const [pet, updatePet] = useState({
@@ -37,69 +39,81 @@ export const NewProfile = () => {
             })
     }
     return (
-        <form>
-            <h2>New Pet Profile</h2>
-            <fieldset>
-                <label htmlFor="image"> Image </label>
-                <input type="text"
-                    className="form-control"
-                    placeholder="Image URL..."
-                    value={pet.image}
-                    onChange={
-                        (evt) => {
-                            const clone = { ...pet }
-                            clone.image = evt.target.value
-                            updatePet(clone)
+        <section  style={{textAlign: "center", paddingLeft: "34.3vw" }}>
+
+            <Form className=" w-50">
+                <h2>New Pet Profile</h2>
+                <Form.Group >
+                    <Form.Label htmlFor="image"> Image </Form.Label>
+                    <Form.Control
+                    style={{textAlign: "center"}}  
+                     type="text"
+                        className="form-control"
+                        placeholder="Image URL..."
+                        value={pet.image}
+                        onChange={
+                            (evt) => {
+                                const clone = { ...pet }
+                                clone.image = evt.target.value
+                                updatePet(clone)
+                            }
                         }
-                    }
-                />
-            </fieldset>
-            <fieldset>
-                <label htmlFor="name"> Name </label>
-                <input type="text"
-                    className="form-control"
-                    placeholder="Pet name..."
-                    value={pet.name}
-                    onChange={
-                        (evt) => {
-                            const clone = { ...pet }
-                            clone.name = evt.target.value
-                            updatePet(clone)
+                    />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label htmlFor="name"> Name </Form.Label>
+                    <Form.Control 
+                    style={{textAlign: "center"}} 
+                    type="text"
+                        className="form-control"
+                        placeholder="Pet name..."
+                        value={pet.name}
+                        onChange={
+                            (evt) => {
+                                const clone = { ...pet }
+                                clone.name = evt.target.value
+                                updatePet(clone)
+                            }
                         }
-                    }
-                />
-            </fieldset>
-            <fieldset>
-                <label>Species </label>
-                <input type="text"
-                className="form-control"
-                placeholder="Pet species..."
-                onChange={
-                    (evt) => {
-                        const clone = {...pet}
-                        clone.species = evt.target.value
-                        updatePet(clone)
-                    }
-                }
-                />
-            </fieldset>
-            <fieldset>
-                <label>Description </label>
-                <input type="text"
-                className="form-control"
-                placeholder="Pet description..."
-                onChange={
-                    (evt) => {
-                        const clone = {...pet}
-                        clone.description = evt.target.value
-                        updatePet(clone)
-                    }
-                }
-                />
-            </fieldset>
-            <button
-                onClick={(clickEvent) => handleSave(clickEvent)}
-            >Submit Profile</button>
-        </form>
+                    />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Species </Form.Label>
+                    <Form.Control 
+                    style={{textAlign: "center"}} 
+                    type="text"
+                        className="form-control"
+                        placeholder="Pet species..."
+                        onChange={
+                            (evt) => {
+                                const clone = { ...pet }
+                                clone.species = evt.target.value
+                                updatePet(clone)
+                            }
+                        }
+                    />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Description </Form.Label>
+                    <Form.Control 
+                    style={{textAlign: "center"}} 
+                    type="text"
+                        className="form-control"
+                        placeholder="Pet description..."
+                        onChange={
+                            (evt) => {
+                                const clone = { ...pet }
+                                clone.description = evt.target.value
+                                updatePet(clone)
+                            }
+                        }
+                    />
+                </Form.Group>
+                <br></br>
+                <Button
+                    onClick={(clickEvent) => handleSave(clickEvent)}
+                >Submit Profile</Button>
+            </Form>
+        </section>
     )
 }

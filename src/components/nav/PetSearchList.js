@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-
+import Stack from "react-bootstrap/esm/Stack";
 import { PetsForSearch } from "./PetObject";
-
+import Row from 'react-bootstrap/Row';
 
 /*All of PetList is literally just to get the pets on their owner's page at this point.
  There will likely be a separate module for getting things on the home page. */
-export const PetSearch = ({searchTermState}) => {
+export const PetSearch = ({ searchTermState }) => {
     const [pets, setPets] = useState([])
     const [filteredPets, setFilteredPets] = useState([])
 
@@ -13,13 +13,13 @@ export const PetSearch = ({searchTermState}) => {
     const localPAPUser = localStorage.getItem("PAP_user")
     const PAPUserObject = JSON.parse(localPAPUser)
 
-useEffect(
-    () => {
-const searchedPets = pets.filter(pet => pet.name.startsWith(searchTermState))
-setFilteredPets(searchedPets)
-    },
-    [searchTermState]
-)
+    useEffect(
+        () => {
+            const searchedPets = pets.filter(pet => pet.name.startsWith(searchTermState))
+            setFilteredPets(searchedPets)
+        },
+        [searchTermState]
+    )
 
     useEffect(
         () => {
@@ -34,15 +34,18 @@ setFilteredPets(searchedPets)
     )
 
     return <>
-        <article className="pets">
-            {
-                // iterating array with .map
-                filteredPets.map(
-                    pet => <PetsForSearch key={`pet--${pet.id}`} petObject={pet} />
-                )
+        <article  >
+            <Row className="align-items-center">
 
-            }
+                {
+                    // iterating array with .map
+                    filteredPets.map(
+                        pet => <PetsForSearch key={`pet--${pet.id}`} petObject={pet} />
+                    )
 
+                }
+
+            </Row>
         </article>
     </>
 }

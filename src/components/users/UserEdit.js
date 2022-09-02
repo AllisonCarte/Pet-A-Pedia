@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 export const UserEdit = () => {
     // Provide initial state for profile
@@ -47,12 +49,15 @@ export const UserEdit = () => {
     }
 
     return (
-        <form className="profile">
+        <section  style={{textAlign: "center", paddingLeft: "34.3vw" }}>
+
+        <Form className="w-50">
             <h2 className="profile__title">Edit Profile</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="image">Image:</label>
-                    <input
+            <Form.Group>
+               
+                    <Form.Label htmlFor="image">Image:</Form.Label>
+                    <Form.Control
+                     style={{textAlign: "center"}} 
                         type="text"
                         className="form-control"
                         value={user?.image}
@@ -63,12 +68,12 @@ export const UserEdit = () => {
                                 updateUser(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Name:</label>
-                    <input
+            </Form.Group>
+            <Form.Group>
+               
+                    <Form.Label htmlFor="name">Name:</Form.Label>
+                    <Form.Control
+                     style={{textAlign: "center"}} 
                         type="text"
                         className="form-control"
                         value={user?.name}
@@ -79,12 +84,12 @@ export const UserEdit = () => {
                                 updateUser(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
-                    <input
+            </Form.Group>
+            <Form.Group>
+               
+                    <Form.Label htmlFor="email">Email:</Form.Label>
+                    <Form.Control
+                     style={{textAlign: "center"}} 
                         type="text"
                         className="form-control"
                         value={user?.email}
@@ -95,12 +100,12 @@ export const UserEdit = () => {
                                 updateUser(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="password">Password:</label>
-                    <input
+            </Form.Group>
+            <Form.Group>
+               
+                    <Form.Label htmlFor="password">Password:</Form.Label>
+                    <Form.Control
+                     style={{textAlign: "center"}} 
                         type="text"
                         className="form-control"
                         value={user?.password}
@@ -111,12 +116,12 @@ export const UserEdit = () => {
                                 updateUser(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="location">Location:</label>
-                    <input
+            </Form.Group>
+            <Form.Group>
+               
+                    <Form.Label htmlFor="location">Location:</Form.Label>
+                    <Form.Control
+                     style={{textAlign: "center"}} 
                         type="text"
                         className="form-control"
                         value={user?.location}
@@ -127,12 +132,12 @@ export const UserEdit = () => {
                                 updateUser(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="bio">Bio:</label>
-                    <input
+            </Form.Group>
+            <Form.Group>
+               
+                    <Form.Label htmlFor="bio">Bio:</Form.Label>
+                    <Form.Control
+                     style={{textAlign: "center"}} 
                         type="text"
                         className="form-control"
                         value={user?.bio}
@@ -143,8 +148,7 @@ export const UserEdit = () => {
                                 updateUser(clone)
                             }
                         } />
-                </div>
-            </fieldset>
+            </Form.Group>
             <br></br>
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
@@ -152,8 +156,10 @@ export const UserEdit = () => {
                 Save
             </button>
             <button className="btn btn-primary" onClick={() => {
-                navigate(`/users/${user.id}`)
+                navigate(`/profile`)
             }}> Cancel</button>
-        </form>
+        </Form>
+        </section>
+
     )
 }

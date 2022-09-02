@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Pet } from "./Pets";
+import {Row} from "react-bootstrap"
 
 
 /*All of PetList is literally just to get the pets on their owner's page at this point.
@@ -38,16 +39,19 @@ export const PetList = () => {
     
 
     return <>
-        <h2>Pet Profiles</h2>
         <article className="pets"> 
-        <div style={{display: 'flex', flexDirection: 'row'}}> 
+        
+        <div> 
+        <Row >
+
             {
                 // iterating array with .map
                 filteredPets.map(
                     pet => <Pet key={`pet--${pet.id}`} petObject={pet} />
-                )
-
-            }
+                    )
+                    
+                }
+                </Row>
             </div>
         </article>
     </>

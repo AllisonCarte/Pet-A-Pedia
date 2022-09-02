@@ -3,7 +3,7 @@
     {
       "id": 1,
       "image": "https://images.pexels.com/photos/2792116/pexels-photo-2792116.jpeg",
-      "name": "Alli",
+      "name": "Mack",
       "email": "mack@email.com",
       "password": "petapppassword020",
       "location": "Charleston",
@@ -29,21 +29,30 @@
       "email": "BecksTest@email.com",
       "password": "BecksTest",
       "id": 4
+    },
+    {
+      "name": "Marcello",
+      "email": "RMARC@email.com",
+      "password": "Cello080976",
+      "id": 5,
+      "bio": "We live in bruh",
+      "location": "The Pit of Despair",
+      "image": "https://images.pexels.com/photos/2968939/pexels-photo-2968939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ],
   "pets": [
     {
       "id": 1,
-      "image": "https://images.pexels.com/photos/434046/pexels-photo-434046.jpeg",
+      "image": "https://images.pexels.com/photos/1933464/pexels-photo-1933464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "userId": 1,
       "upvotes": 666,
-      "name": "Jackie",
-      "breed": "Mixed",
+      "name": "Ophie",
+      "breed": "Mixed-breed",
       "species": "Dog",
-      "description": "Smol, fuzzy brown thing with some white patches on her belly",
-      "restrictions": "Can't have gravy",
-      "records": "Has separation anxiety",
-      "notes": "Loves her red alien toy and to lay on all the things I tell her not to"
+      "description": "A small, white pup",
+      "restrictions": "",
+      "records": "",
+      "notes": "Loves to lay on all the things I tell her not to"
     },
     {
       "userId": 1,
@@ -54,8 +63,8 @@
       "breed": "Tabby",
       "restrictions": "Allergic to catnip",
       "Records": "Feline eosinophilic keratitis",
-      "description": "Tabby cat with green eyes",
-      "notes": "Likes catnip and to roll around in the grass",
+      "description": "A pretty green-eyed kitty",
+      "notes": "Inquisitive, but hates to admit it.",
       "id": 2,
       "records": "Eye issues"
     },
@@ -68,7 +77,7 @@
       "description": "Cream-colored kitten with blue eyes",
       "id": 3,
       "breed": "Tabby",
-      "notes": "Mischievous "
+      "notes": "In ancient times, cats were worshipped as gods. Taco has not forgotten this."
     },
     {
       "userId": 3,
@@ -84,13 +93,46 @@
     },
     {
       "userId": 1,
-      "image": "https://images.pexels.com/photos/2078845/pexels-photo-2078845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "name": "Rengoku",
+      "image": "https://images.pexels.com/photos/53498/snake-python-mojave-wilderness-53498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Dorito",
       "upvotes": 43,
-      "species": "Gecko",
-      "description": "Black and brown lizard",
-      "notes": "Enjoys sunning on the rocks in his enclosure",
-      "id": 5
+      "species": "",
+      "description": "Brown and beige danger noodle",
+      "notes": "Dorito says snake it till you make it",
+      "id": 5,
+      "breed": "Ball Python"
+    },
+    {
+      "userId": 5,
+      "image": "https://images.pexels.com/photos/2540644/pexels-photo-2540644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Dave",
+      "species": "Macaw",
+      "description": "",
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "image": "https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Woof",
+      "species": "Dog",
+      "description": "",
+      "id": 7
+    },
+    {
+      "userId": 5,
+      "image": "https://images.pexels.com/photos/127028/pexels-photo-127028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Sgt. Pepper",
+      "species": "Cat",
+      "description": "",
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "image": "https://images.pexels.com/photos/1335341/pexels-photo-1335341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Shadow",
+      "species": "Cat",
+      "description": "Meow",
+      "id": 9
     }
   ],
   "schedule": [
@@ -107,32 +149,8 @@
       "petId": 1,
       "date": "",
       "isTask": true,
-      "details": "Clean the cage",
-      "frequency": "Twice weekly"
-    },
-    {
-      "petId": 1,
-      "date": "2022-08-16",
-      "isTask": false,
-      "details": "Test",
-      "frequency": "twice",
-      "id": 3
-    },
-    {
-      "petId": 1,
-      "date": "",
-      "isTask": false,
-      "details": "tEST",
-      "frequency": "Once",
-      "id": 4
-    },
-    {
-      "petId": 1,
-      "date": "2022-08-09",
-      "isTask": false,
-      "details": "PLay date",
-      "frequency": "Once",
-      "id": 5
+      "details": "Take for a walk",
+      "frequency": "Once daily"
     }
   ]
 }
