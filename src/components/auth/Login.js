@@ -40,11 +40,12 @@ export const Login = () => {
     return (
         <main style={styles.form}>
         <Form style={styles.form} onSubmit={handleLogin}>
-            <h1>Pet-A-Pedia</h1>
-            <h2>Please sign in</h2>
+            <h1 style={styles.form}>Pet-A-Pedia</h1>
+            <h2 style={styles.form}>Please sign in</h2>
             <Form.Group className="mb-3" >
                 <Form.Label htmlFor="inputemail">Email address</Form.Label>
                 <Form.Control type="email"
+                style={styles.form}
                             value={email}
                             onChange={evt => setEmail(evt.target.value)}
                             className="form-control"
@@ -58,6 +59,7 @@ export const Login = () => {
             <Form.Group className="mb-3" >
                 <Form.Label  htmlFor="inputPassword">Password</Form.Label>
                 <Form.Control type="password"
+                            style={styles.form}
                             value={password}
                             onChange={evt => setPassword(evt.target.value)}
                             className="form-control"

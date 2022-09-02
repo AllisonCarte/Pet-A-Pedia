@@ -41,8 +41,8 @@ petImage: {
   width: "100%"
   
 },
-petImageContainer: {
-  width: "10%"
+cardColor: {
+  backgroundColor: "black"
 },
 
       }

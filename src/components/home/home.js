@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { HomeCarousel } from "../bootstrapComps/homeCarousel";
 import { HomeEdition } from "./homePets";
 
 export const Home = () => {
@@ -9,8 +9,9 @@ export const Home = () => {
 
 
 
-     
-        <HomeEdition/>
+        <HomeCarousel />
+{/* 
+        <HomeEdition /> */}
 
     </>
     )

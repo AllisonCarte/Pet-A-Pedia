@@ -30,8 +30,7 @@ export const UserList = () => {
 
 
     return <>
-    <h2>User Profile</h2>
-    <article>
+    <article >
         {
             // iterating array with .map
             filteredUser.map(

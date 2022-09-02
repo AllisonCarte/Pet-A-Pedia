@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useParams } from "react-router-dom"
+import { Form, Button } from "react-bootstrap";
+import { styles } from "../styles/styles";
+import Table from "react-bootstrap/esm/Table";
 
 export const NewScheduleItem = () => {
   const navigate = useNavigate()
@@ -37,24 +40,28 @@ export const NewScheduleItem = () => {
       })
   }
   return (
-    <form>
-      <h2>Add to Schedule</h2>
+    <article style={styles.form}>
+    <Form style={styles.form}>
+      <h2 style={styles.form}>Add to Schedule</h2>
+      <Table>
+
       <tr>
-      <td>
-        <input
+      <td >
+        <Form.Control
           type="text"
           placeholder="Details"
           name="details"
           value={schedule.details}
+          z    
           onChange={(evt) => {
             const clone = { ...schedule }
             clone.details = evt.target.value
             updateSchedule(clone)
-        }}
-        ></input>
+          }}
+          ></Form.Control>
       </td>
       <td>
-        <input
+        <Form.Control
           type="date"
           placeholder="Date"
           name="date"
@@ -63,11 +70,11 @@ export const NewScheduleItem = () => {
             const clone = { ...schedule }
             clone.date = evt.target.value
             updateSchedule(clone)
-        }}
-        ></input>
+          }}
+        ></Form.Control>
       </td>
       <td>
-        <input
+        <Form.Control
           type="text"
           placeholder="Frequency"
           name="frequency"
@@ -76,28 +83,30 @@ export const NewScheduleItem = () => {
             const clone = { ...schedule }
             clone.frequency = evt.target.value
             updateSchedule(clone)
-        }}
-        ></input>
+          }}
+        ></Form.Control>
       </td>
     </tr>
-    <fieldset>
-                <div className="form-group">
-                    <label htmlFor="isTask">Is this a task? </label>
+          </Table>
+    <Form.Group>
+                <div className="Form-group">
+                    <label htmlFor="isTask">Is this a task?  </label>
                     <input type="checkbox"
                         value={schedule.isTask}
                         onChange={
-                            (evt) => {
+                          (evt) => {
                                 const clone = { ...schedule }
                                 clone.isTask = evt.target.checked && clone.isTask === true
                                 updateSchedule(clone)
-                            }
-                        } />
+                              }
+                            } />
                 </div>
-            </fieldset>
-      <button
+            </Form.Group>
+      <Button
         onClick={(clickEvent) => handleSave(clickEvent)}
-      >Submit Schedule</button>
-    </form>
+        >Submit Schedule</Button>
+    </Form>
+        </article>
   )
 }
 

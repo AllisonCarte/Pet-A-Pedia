@@ -8,10 +8,12 @@ import { Link } from 'react-router-dom';
 export const PetsForSearch = ({ petObject }) => {
 
     return (
-        <Row xs={1} md={6} className="g-4">
+        <>
+    
+       <div style={{display: "flex", flexWrap: "wrap", flexDirection: "column", textAlign: "center"}}>
             {Array.from({ length: 1 }).map((_, idx) => (
-                <Col>
-                    <Card >
+                <Col className="m-auto align-items-center">
+                    <Card className="mx-auto" style={{width: "25vw", margin: "1rem"}}>
                         <Card.Img variant="top" src={petObject.image} />
                         <Card.Body>
                             <Card.Title as="h3"><Link to={`/pets/${petObject.id}`}>{petObject.name}</Link></Card.Title>
@@ -24,6 +26,7 @@ export const PetsForSearch = ({ petObject }) => {
                     </Card>
                 </Col>
             ))}
-        </Row>
+            </div>
+            </>
     );
 }

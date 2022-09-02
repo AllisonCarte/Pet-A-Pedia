@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { styles } from "../styles/styles"
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 export const PetEdit = () => {
     // Provide initial state for profile
 
@@ -51,12 +53,14 @@ export const PetEdit = () => {
     }
 
     return (
-        <form className="profile">
+        <section  style={{textAlign: "center", paddingLeft: "34.3vw" }}>
+        
+        <Form className=" w-50">
             <h2 className="profile__title">Edit Profile</h2>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="image">Image:</label>
-                    <input
+            <Form.Group>
+                    <Form.Label htmlFor="image">Image:</Form.Label>
+                    <Form.Control
+                        style={{ textAlign: "center" }}
                         type="text"
                         className="form-control"
                         value={pet?.image}
@@ -67,12 +71,13 @@ export const PetEdit = () => {
                                 updatePet(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Name:</label>
-                    <input
+               
+            </Form.Group>
+            <Form.Group>
+               
+                    <Form.Label htmlFor="name">Name:</Form.Label>
+                    <Form.Control
+                        style={{ textAlign: "center" }}
                         type="text"
                         className="form-control"
                         value={pet?.name}
@@ -83,12 +88,13 @@ export const PetEdit = () => {
                                 updatePet(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="breed">Breed:</label>
-                    <input
+               
+            </Form.Group>
+            <Form.Group>
+              
+                    <Form.Label htmlFor="breed">Breed:</Form.Label>
+                    <Form.Control
+                        style={{ textAlign: "center" }}
                         type="text"
                         className="form-control"
                         value={pet?.breed}
@@ -99,12 +105,13 @@ export const PetEdit = () => {
                                 updatePet(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="species">Species:</label>
-                    <input
+              
+            </Form.Group>
+            <Form.Group>
+               
+                    <Form.Label htmlFor="species">Species:</Form.Label>
+                    <Form.Control
+                        style={{ textAlign: "center" }}
                         type="text"
                         className="form-control"
                         value={pet?.species}
@@ -115,12 +122,12 @@ export const PetEdit = () => {
                                 updatePet(clone)
                             }
                         } />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="description">Description:</label>
-                    <input
+               
+            </Form.Group>
+            <Form.Group>
+                    <Form.Label htmlFor="description">Description:</Form.Label>
+                    <Form.Control
+                        style={{ textAlign: "center" }}
                         type="text"
                         className="form-control"
                         value={pet?.description}
@@ -131,13 +138,14 @@ export const PetEdit = () => {
                                 updatePet(clone)
                             }
                         } />
-                </div>
-            </fieldset>
+             
+            </Form.Group>
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="restrictions">Restrictions:</label>
-                    <input
+            <Form.Group>
+             
+                    <Form.Label htmlFor="restrictions">Restrictions:</Form.Label>
+                    <Form.Control
+                        style={{ textAlign: "center" }}
                         type="text"
                         className="form-control"
                         value={pet?.restrictions}
@@ -148,13 +156,13 @@ export const PetEdit = () => {
                                 updatePet(clone)
                             }
                         } />
-                </div>
-            </fieldset>
+              
+            </Form.Group>
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="records">Records:</label>
-                    <input
+            <Form.Group>
+                    <Form.Label htmlFor="records">Records:</Form.Label>
+                    <Form.Control
+                        style={{ textAlign: "center" }}
                         type="text"
                         className="form-control"
                         value={pet?.records}
@@ -165,13 +173,14 @@ export const PetEdit = () => {
                                 updatePet(clone)
                             }
                         } />
-                </div>
-            </fieldset>
+               
+            </Form.Group>
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="notes">Notes:</label>
-                    <input
+            <Form.Group>
+               
+                    <Form.Label htmlFor="notes">Notes:</Form.Label>
+                    <Form.Control
+                        style={{ textAlign: "center" }}
                         type="text"
                         className="form-control"
                         value={pet?.notes}
@@ -182,17 +191,18 @@ export const PetEdit = () => {
                                 updatePet(clone)
                             }
                         } />
-                </div>
-            </fieldset>
+               
+            </Form.Group>
             <br></br>
-            <button
+            <Button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
                 Save
-            </button>
-            <button className="btn btn-primary" style={styles.button} onClick={() => {
+            </Button>
+            <Button className="btn btn-primary"  onClick={() => {
                 navigate(`/pets/${pet.id}`)
-            }}> Cancel</button>
-        </form>
+            }}> Cancel</Button>
+        </Form>
+        </section>
     )
 }
