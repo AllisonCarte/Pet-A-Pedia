@@ -195,11 +195,12 @@ export const PetEdit = () => {
             </Form.Group>
             <br></br>
             <Button
+            style={styles.button}
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
                 Save
             </Button>
-            <Button className="btn btn-primary"  onClick={() => {
+            <Button className="btn btn-primary " style={styles.button} onClick={() => {
                 navigate(`/pets/${pet.id}`)
             }}> Cancel</Button>
         </Form>

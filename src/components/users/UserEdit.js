@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { styles } from "../styles/styles";
 
 export const UserEdit = () => {
     // Provide initial state for profile
@@ -106,13 +107,13 @@ export const UserEdit = () => {
                     <Form.Label htmlFor="password">Password:</Form.Label>
                     <Form.Control
                      style={{textAlign: "center"}} 
-                        type="text"
+                        type="password"
                         className="form-control"
                         value={user?.password}
                         onChange={
                             (evt) => {
                                 const clone = { ...user }
-                                clone.user = evt.target.value
+                                clone.password = evt.target.value
                                 updateUser(clone)
                             }
                         } />
@@ -151,11 +152,14 @@ export const UserEdit = () => {
             </Form.Group>
             <br></br>
             <button
+            style={styles.button}
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
                 Save
             </button>
-            <button className="btn btn-primary" onClick={() => {
+            <button className="btn btn-primary" 
+            style={styles.button}
+            onClick={() => {
                 navigate(`/profile`)
             }}> Cancel</button>
         </Form>

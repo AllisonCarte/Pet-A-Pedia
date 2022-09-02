@@ -12,7 +12,7 @@ export const HomeCarousel = () => {
               <img
                 style={{ height: "44.5vw", width: "99.9vw" }}
                 className="d-block "
-                src="https://images.pexels.com/photos/6897437/pexels-photo-6897437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://images.pexels.com/photos/7516509/pexels-photo-7516509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="First slide"
               />
               <Carousel.Caption>

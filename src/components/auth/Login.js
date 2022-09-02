@@ -38,41 +38,41 @@ export const Login = () => {
 
 
     return (
-        <main style={styles.form}>
+        <main  >
         <Form style={styles.form} onSubmit={handleLogin}>
-            <h1 style={styles.form}>Pet-A-Pedia</h1>
-            <h2 style={styles.form}>Please sign in</h2>
+            <h1 >Pet-A-Pedia</h1>
+            <h2 >Please sign in</h2>
             <Form.Group className="mb-3" >
                 <Form.Label htmlFor="inputemail">Email address</Form.Label>
                 <Form.Control type="email"
-                style={styles.form}
+               style={{textAlign: "center"}}
                             value={email}
                             onChange={evt => setEmail(evt.target.value)}
                             className="form-control"
-                            placeholder="email"
+                            placeholder="Email"
                             required autoFocus />
-                <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                </Form.Text>
+                
             </Form.Group>
 
             <Form.Group className="mb-3" >
                 <Form.Label  htmlFor="inputPassword">Password</Form.Label>
                 <Form.Control type="password"
-                            style={styles.form}
+                           style={{textAlign: "center"}}
                             value={password}
                             onChange={evt => setPassword(evt.target.value)}
                             className="form-control"
-                            placeholder="password"
+                            placeholder="Password"
                             required autoFocus />
+                            <Form.Text className="text-muted">
+                </Form.Text>
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button style={styles.button} variant="primary" type="submit">
                 Sign in
             </Button>
         </Form>
-        <section className="link--register">
-                <Link to="/register">Don't have an account?</Link>
+        <section style={styles.form} className="link--register">
+                <Link className="text-muted" to="/register">Don't have an account?</Link>
             </section>
         </main>
     );

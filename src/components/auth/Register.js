@@ -52,52 +52,54 @@ export const Register = (prop) => {
         setUser(copy)
     }
     return (
-        <main style={styles.form}>
+        <main >
         <Form style={styles.form} onSubmit={handleReg}>
-            <h1 style={styles.form}>Pet-A-Pedia</h1>
-             <h2 style={styles.form} className="form--header">Please register</h2>
+            <h1>Pet-A-Pedia</h1>
+             <h2  className="form--header">Please register</h2>
           <Form.Group className="mb-3" >
             <Form.Label>Name</Form.Label>
-            <Form.Control style={styles.form} onChange={updateUser}
+            <Form.Control style={{textAlign: "center"}} onChange={updateUser}
                         type="text"
                         id="name"
                         className="form-control"
-                        placeholder="Name..."
+                        placeholder="Name"
                         required autoFocus />
             <Form.Text className="text-muted">
-              We'll only share your name if you want us to.
+            
             </Form.Text>
           </Form.Group>
 
 
           <Form.Group className="mb-3" >
             <Form.Label>Email address</Form.Label>
-            <Form.Control style={styles.form}  onChange={updateUser}
+            <Form.Control style={{textAlign: "center"}}  onChange={updateUser}
                         type="email"
                         id="email"
                         className="form-control"
-                        placeholder="Email Address..."
+                        placeholder="Email Address"
                         required />
             <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
+           
             </Form.Text>
           </Form.Group>
 
 
           <Form.Group className="mb-3" >
             <Form.Label>Password</Form.Label>
-            <Form.Control style={styles.form} onChange={updateUser}
+            <Form.Control style={{textAlign: "center"}} onChange={updateUser}
                         type="text"
                         id="password"
                         className="form-control"
-                        placeholder="Password..."
+                        placeholder="Password"
                         required autoFocus />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
+          <Button style={styles.button} variant="primary" type="submit">
+            Register
           </Button>
         </Form>
-        <Link  to="/login">Already have an account?</Link>
+        <section style={styles.form}>
+        <Link className="text-muted" to="/login">Already have an account?</Link>
+        </section>
         </main>
       );
 

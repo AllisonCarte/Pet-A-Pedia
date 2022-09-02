@@ -23,6 +23,8 @@ export const styles  = {
 
         // forms 
         form: {
+          width: "68.5rem",
+          paddingLeft: "25vw",
           textAlign: "center"
 
 
